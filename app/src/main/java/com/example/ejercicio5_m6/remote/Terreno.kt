@@ -1,4 +1,4 @@
-package com.example.ejercicio5_m6.data.remote
+package com.example.ejercicio5_m6.remote
 
 import com.google.gson.annotations.SerializedName
 

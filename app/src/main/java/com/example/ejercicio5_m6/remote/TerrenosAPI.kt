@@ -1,6 +1,7 @@
-package com.example.ejercicio5_m6.data.remote
+package com.example.ejercicio5_m6.remote
 
 
+import com.example.ejercicio5_m6.remote.Terreno
 import retrofit2.Response
 import retrofit2.http.GET
 

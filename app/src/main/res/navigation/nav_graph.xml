@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listadoTerrenosFragment">
+
+    <fragment
+        android:id="@+id/listadoTerrenosFragment"
+        android:name="com.example.ejercicio5_m6.Presentation.ListadoTerrenosFragment"
+        android:label="fragment_listado_terrenos"
+        tools:layout="@layout/fragment_listado_terrenos" />
+</navigation>
