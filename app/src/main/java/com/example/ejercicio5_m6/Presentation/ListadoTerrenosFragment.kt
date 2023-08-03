@@ -27,11 +27,22 @@ class ListadoTerrenosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentListadoTerrenosBinding.inflate(layoutInflater, container, false)
+        initAdapter()
         // Inflate the layout for this fragment
         binding.btnCargar.setOnClickListener{
             terrenoVM.getListaTerrenos()
         }
         return binding.root
+    }
+    private fun initAdapter() {
+        terrenoVM.getListaTerrenos()
+        val adapter = AdapterTerreno()
+        binding.recyclerView.adapter = adapter
+        terrenoVM.terrenosLiveData.observe(viewLifecycleOwner){
+            adapter.setData(it)
+        }
+
+
     }
 
 }

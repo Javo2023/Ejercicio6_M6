@@ -24,6 +24,7 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ItemTerrenoViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemTerrenoViewHolder {
         binding = ItemTerrenoBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return ItemTerrenoViewHolder(binding)
+
     }
 
     override fun getItemCount(): Int {
@@ -41,4 +42,6 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ItemTerrenoViewHolder
         this.listItemTerrenos.addAll(terreno)
         notifyDataSetChanged()
     }
+
+
 }

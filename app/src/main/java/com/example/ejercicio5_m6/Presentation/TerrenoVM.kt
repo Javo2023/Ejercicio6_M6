@@ -2,13 +2,16 @@ package com.example.ejercicio5_m6.Presentation
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.ejercicio5_m6.data.data.Repositorio
+import com.example.ejercicio5_m6.remote.Terreno
 import com.example.ejercicio5_m6.remote.TerrenoRetroFit
 import kotlinx.coroutines.launch
 
 class TerrenoVM (application: Application): AndroidViewModel(application){
     private val repositorio:Repositorio
+    val terrenosLiveData = MutableLiveData<List<Terreno>>()
 
     init {
         val api = TerrenoRetroFit.getRetrofitTerreno()
@@ -16,6 +19,6 @@ class TerrenoVM (application: Application): AndroidViewModel(application){
     }
 
     fun getListaTerrenos() = viewModelScope.launch{
-        repositorio.cargarTerreno()
+        terrenosLiveData.value = repositorio.cargarTerreno()
     }
 }
