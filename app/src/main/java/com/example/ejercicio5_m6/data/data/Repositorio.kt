@@ -1,7 +1,7 @@
 package com.example.ejercicio5_m6.data.data
 
-import com.example.ejercicio5_m6.remote.Terreno
-import com.example.ejercicio5_m6.remote.TerrenosAPI
+import com.example.ejercicio5_m6.data.data.remote.Terreno
+import com.example.ejercicio5_m6.data.data.remote.TerrenosAPI
 
 class Repositorio (private val terrenosAPI: TerrenosAPI){
 

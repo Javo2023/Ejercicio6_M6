@@ -5,8 +5,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.ejercicio5_m6.data.data.Repositorio
-import com.example.ejercicio5_m6.remote.Terreno
-import com.example.ejercicio5_m6.remote.TerrenoRetroFit
+import com.example.ejercicio5_m6.data.data.remote.Terreno
+import com.example.ejercicio5_m6.data.data.remote.TerrenoRetroFit
 import kotlinx.coroutines.launch
 
 class TerrenoVM (application: Application): AndroidViewModel(application){

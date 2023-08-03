@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.ejercicio5_m6.databinding.ItemTerrenoBinding
-import com.example.ejercicio5_m6.remote.Terreno
+import com.example.ejercicio5_m6.data.data.remote.Terreno
 
 
 
@@ -15,7 +15,7 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ItemTerrenoViewHolder
        private val listItemTerrenos = mutableListOf<Terreno>()
 
     class ItemTerrenoViewHolder (val v:ItemTerrenoBinding): RecyclerView.ViewHolder(v.root){
-        fun bind(terreno:Terreno){
+        fun bind(terreno: Terreno){
             v.imgTerreno.load(terreno.img)
         }
 
