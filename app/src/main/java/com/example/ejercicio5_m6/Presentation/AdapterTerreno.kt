@@ -25,7 +25,8 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ItemTerrenoViewHolder
             v.cardTerreno.setOnClickListener{
                 val bundle = Bundle()
                 bundle.putString("id", terreno.id)
-                Navigation.findNavController(v.root).navigate(R.id.action_listadoTerrenosFragment_to_detalleFragment)
+
+                Navigation.findNavController(v.root).navigate(R.id.action_listadoTerrenosFragment_to_detalleFragment,bundle)
             }
         }
 

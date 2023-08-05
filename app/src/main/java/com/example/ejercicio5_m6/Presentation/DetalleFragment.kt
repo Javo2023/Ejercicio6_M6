@@ -5,14 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.example.ejercicio5_m6.R
 import com.example.ejercicio5_m6.databinding.FragmentDetalleBinding
 
 private const val ARG_PARAM1 ="id"
 
+
 class DetalleFragment : Fragment() {
     private lateinit var binding : FragmentDetalleBinding
     private var param1: String? = null
+    private val terrenoVM: TerrenoVM by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +31,10 @@ class DetalleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetalleBinding.inflate(layoutInflater,container,false)
-        binding.tvId.text = param1
+        terrenoVM.terrenoLiveData(param1.toString()).observe(viewLifecycleOwner){
+            binding.tvId.text = it.id
+        }
+
 
         // Inflate the layout for this fragment
         return binding.root
