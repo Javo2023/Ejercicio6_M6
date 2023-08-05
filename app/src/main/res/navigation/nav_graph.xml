@@ -9,5 +9,14 @@
         android:id="@+id/listadoTerrenosFragment"
         android:name="com.example.ejercicio5_m6.Presentation.ListadoTerrenosFragment"
         android:label="fragment_listado_terrenos"
-        tools:layout="@layout/fragment_listado_terrenos" />
+        tools:layout="@layout/fragment_listado_terrenos" >
+        <action
+            android:id="@+id/action_listadoTerrenosFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.ejercicio5_m6.Presentation.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" />
 </navigation>

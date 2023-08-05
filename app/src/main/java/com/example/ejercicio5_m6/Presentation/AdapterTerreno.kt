@@ -1,9 +1,13 @@
 package com.example.ejercicio5_m6.Presentation
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.ejercicio5_m6.R
 import com.example.ejercicio5_m6.data.data.local.TerrenoEntity
 import com.example.ejercicio5_m6.databinding.ItemTerrenoBinding
 import com.example.ejercicio5_m6.data.data.remote.Terreno
@@ -18,6 +22,11 @@ class AdapterTerreno : RecyclerView.Adapter<AdapterTerreno.ItemTerrenoViewHolder
     class ItemTerrenoViewHolder (val v:ItemTerrenoBinding): RecyclerView.ViewHolder(v.root){
         fun bind(terreno: TerrenoEntity){
             v.imgTerreno.load(terreno.imagen)
+            v.cardTerreno.setOnClickListener{
+                val bundle = Bundle()
+                bundle.putString("id", terreno.id)
+                Navigation.findNavController(v.root).navigate(R.id.action_listadoTerrenosFragment_to_detalleFragment)
+            }
         }
 
     }

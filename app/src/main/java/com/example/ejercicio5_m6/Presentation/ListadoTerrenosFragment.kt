@@ -31,6 +31,7 @@ class ListadoTerrenosFragment : Fragment() {
         // Inflate the layout for this fragment
         binding.btnCargar.setOnClickListener{
             terrenoVM.getListaTerrenos()
+
         }
         return binding.root
     }
